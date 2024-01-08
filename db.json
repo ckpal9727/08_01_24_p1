@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "name": "ck4",
+      "email": "ck4@me.com",
+      "password": "12",
+      "address": {
+        "streetName": "shva",
+        "streetNumber": "1234"
+      },
+      "id": 1
+    },
+    {
+      "name": "ck2",
+      "email": "ck4@me.com",
+      "password": "12",
+      "address": {
+        "streetName": "scgh",
+        "streetNumber": "1234"
+      },
+      "id": 2
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+<!-- <form [formGroup]="userUpdate" >
+    <div>
+      <label>Name</label>
+      <input type="text" formControlName="name" [value]="userUpdate.value?.name">
+      <span *ngIf="userUpdate.get('name')?.dirty">Name error</span>
+    </div>
+    <div>
+      <label>Email</label>
+      <input type="email" formControlName="email" [value]="userUpdate.value?.email">
+      <span *ngIf="userUpdate.get('email')?.dirty">Email error</span>
+    </div>
+    <div>
+    
+        
+      </div>
+    
+    <div formGroupName="address">
+      <div>
+        <label>Street Name</label>
+        <input type="text" formControlName="streetName" [value]="userUpdate.value?.address.streetName">
+      </div>
+      <div>
+        <label>Street Number</label>
+        <input type="text" formControlName="streetNumber" [value]="userUpdate.value?.address.streetNumber">
+      </div>
+    </div>
+    <button type="submit"   (click)="onSubmit()">Submit</button>
+  </form>
+   -->
+   <form [formGroup]="userUpdate">
+    <div>
+      <label>Name</label>
+      <input type="text" formControlName="name" [value]="userUpdate.value?.name">
+      <!-- Display error message if the name control is invalid -->
+      <span *ngIf="userUpdate.get('name')?.invalid && userUpdate.get('name')?.touched">Name is required</span>
+    </div>
+    <div>
+      <label>Email</label>
+      <input type="email" formControlName="email">
+      <!-- Display error message if the email control is invalid -->
+      <span *ngIf="userUpdate.get('email')?.invalid && userUpdate.get('email')?.touched">Invalid email</span>
+    </div>
+    <div formGroupName="address">
+      <div>
+        <label>Street Name</label>
+        <input type="text" formControlName="streetName">
+      </div>
+      <div>
+        <label>Street Number</label>
+        <input type="text" formControlName="streetNumber">
+      </div>
+    </div>
+    <button type="submit" (click)="onSubmit()">Submit</button>
+  </form>
+  
